@@ -1,13 +1,14 @@
-﻿using Entities.Concrete;
+﻿
+using Core.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
-using Entities.Abstract;
 
-namespace DataAccess.Abstract
+
+namespace Core.DataAccess
 {
     // generic constraint - jenerik kısıtlama
     // class : referans tip olabilir demek
