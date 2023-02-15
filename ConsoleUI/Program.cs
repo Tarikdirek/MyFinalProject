@@ -11,11 +11,25 @@ internal class Program
         //ProductTest();
         //IoC
         //CategoryTest();
-        ProductManager productManager1 = new ProductManager(new EfProductDal());
-        foreach (var product in productManager1.GetProductDetails())
-        {
-            Console.WriteLine(product.ProductName + " ---> " + product.CategoryName );
-        }
+        //ProductManager productManager1 = new ProductManager(new EfProductDal());
+
+        //var result = productManager1.GetProductDetails();
+
+        //if (result.Success == true ) 
+        //{ 
+        //    foreach (var product in result.Data)
+        //    {
+        //    Console.WriteLine(product.ProductName + " ---> " + product.CategoryName );
+        //    }
+        //}
+        //else
+        //{
+        //    Console.WriteLine(result.Message);
+        //}
+
+        //ProductManager product = new ProductManager(new EfProductDal());
+        //var result = product.GetById(1);
+        //Console.WriteLine(result.Data.ProductName);
 
 
 
@@ -34,7 +48,7 @@ internal class Program
     private static void ProductTest()
     {
         ProductManager productManager = new ProductManager(new EfProductDal());
-        foreach (var product in productManager.GetByUnitPrice(50, 100))
+        foreach (var product in productManager.GetByUnitPrice(50, 100).Data)
         {
             Console.WriteLine(product.ProductName);
         }
